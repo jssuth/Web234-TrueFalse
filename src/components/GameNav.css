@@ -1,0 +1,15 @@
+.game-nav {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 20px;
+}
+
+.game-nav button {
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.active {
+  background-color: #6cc4ff;
+}

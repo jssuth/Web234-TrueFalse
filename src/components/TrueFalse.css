@@ -1,0 +1,43 @@
+.tf-wrapper {
+  text-align: center;
+  max-width: 700px;
+  margin: auto;
+}
+
+.tf-item {
+  margin-bottom: 20px;
+}
+
+.tf-question {
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.tf-btn {
+  padding: 8px 18px;
+  margin: 0 6px;
+  background: #dcecff;
+  border: 1px solid #8ab6e6;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.tf-btn.correct {
+  background: #b9ffb9;
+  border-color: green;
+}
+
+.tf-btn.wrong {
+  background: #ffd3d3;
+  border-color: red;
+}
+
+.reset-btn {
+  margin-top: 25px;
+  padding: 10px 24px;
+  border: none;
+  background: #61dafb;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}

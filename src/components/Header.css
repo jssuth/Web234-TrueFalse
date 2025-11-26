@@ -1,0 +1,30 @@
+.header {
+  display: flex;
+  flex-direction: column;   /* THIS IS THE KEY */
+  align-items: center;
+  padding: 20px;
+  background: #282c34;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.header img {
+  height: 60px;
+  margin-bottom: 10px;      /* space between logo and text */
+}
+
+
+.header img {
+  height: 60px;
+  margin-right: 15px;
+}
+
+.title {
+  display: block;        /* IMPORTANT — forces h1 to act as a full-width block */
+  width: 100%;
+}
+
+.subtitle {
+  display: block;        /* ensures it goes below */
+  margin-top: 6px;       /* optional spacing */
+}
