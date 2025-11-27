@@ -3,7 +3,7 @@ name: build-deploy
 on:
   push:
     branches:
-      - main   # 👈 triggers on pushes to your main branch
+      - main   # triggers on pushes to your main branch
 
 permissions:
   contents: write
@@ -36,7 +36,8 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: dist   # 👈 Vite outputs here by default
+          publish_dir: dist   # Vite outputs here by default
           commit_message: ${{ github.event.head_commit.message }}
           force_orphan: true
           publish_branch: gh-pages
+

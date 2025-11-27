@@ -3,5 +3,5 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/final-exam/',   //  MATCH EXACT REPO NAME
+  base: '/Web234/',   //  MATCH EXACT REPO NAME
 })
