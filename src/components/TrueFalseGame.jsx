@@ -2,18 +2,29 @@ import React, { useState } from "react";
 import truefalse from "../data/truefalse";
 import "./TrueFalse.css";
 
+// ✅ SHUFFLE FUNCTION
+function shuffleArray(array) {
+  return [...array].sort(() => Math.random() - 0.5);
+}
+
 export default function TrueFalseGame() {
   const [selected, setSelected] = useState({});
+  const [shuffled, setShuffled] = useState(shuffleArray(truefalse));
 
   const handleAnswer = (index, value) => {
     setSelected({ ...selected, [index]: value });
+  };
+
+  const handleReset = () => {
+    setSelected({});
+    setShuffled(shuffleArray(truefalse)); // ✅ reshuffle on reset
   };
 
   return (
     <div className="tf-wrapper">
       <h2>React True / False Quiz</h2>
 
-      {truefalse.map((q, i) => {
+      {shuffled.map((q, i) => {
         const userAnswer = selected[i];
         const correct = q.answer;
 
@@ -52,7 +63,7 @@ export default function TrueFalseGame() {
         );
       })}
 
-      <button className="reset-btn" onClick={() => setSelected({})}>
+      <button className="reset-btn" onClick={handleReset}>
         Reset Quiz
       </button>
     </div>

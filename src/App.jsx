@@ -1,29 +1,24 @@
-import React, { useState } from "react";
-import Header from "./components/Header.jsx";
-import Footer from "./components/Footer.jsx";
-import GameNav from "./components/GameNav.jsx";
-import DefinitionsGame from "./components/DefinitionsGame.jsx";
-import SnippetsGame from "./components/SnippetsGame.jsx";
-import TrueFalseGame from "./components/TrueFalseGame.jsx";
-import "./index.css";
+
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import GameNav from "./components/GameNav";
+import TrueFalseGame from "./components/TrueFalseGame";
 
 function App() {
-  const [activeGame, setActiveGame] = useState("definitions");
-
   return (
-    <div className="app-container">
+    <>
       <Header />
 
-      <GameNav activeGame={activeGame} setActiveGame={setActiveGame} />
+      {/* You can keep the nav if you like the layout,
+          even if it only shows True/False now */}
+      <GameNav />
 
-      <main className="game-container">
-        {activeGame === "definitions" && <DefinitionsGame />}
-        {activeGame === "snippets" && <SnippetsGame />}
-        {activeGame === "truefalse" && <TrueFalseGame />}
+      <main style={{ padding: "20px" }}>
+        <TrueFalseGame />
       </main>
 
       <Footer />
-    </div>
+    </>
   );
 }
 
